@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: eshopweb-deployment
+  namespace: eshopweb-user009
   labels:
     app: eshoponweb
 spec:
