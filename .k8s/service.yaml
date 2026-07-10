@@ -3,6 +3,7 @@ kind: Service
 metadata:
   # namespace: eshoponweb-user009
   name: eshoponweb
+  namespace: eshopweb-user009
   labels:
     app: eshoponweb
     service: webapp
