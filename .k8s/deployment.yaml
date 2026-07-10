@@ -1,29 +1,21 @@
 apiVersion: apps/v1
-kind: Namespace
-metadata:
-  name: eshoponweb-user009
-
----
-apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: eshoponweb-user009
-  name: webapp
+  name: eshopweb-deployment
   labels:
-    app: sample-app
+    app: eshoponweb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: webapp
+      app: eshoponweb
   template:
     metadata:
       labels:
-        app: sample-app
-        service: webapp
+        app: eshoponweb
     spec:
       containers:
-        - name: webapp
+        - name: eshoponweb-app
           image: aistraining.azurecr.io/eshoponweb-user009:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
